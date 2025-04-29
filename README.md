@@ -1,78 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Planifacile - Votre rendez-vous en toute liberté</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #000000;
-      font-family: 'Helvetica Neue', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
+# Planifacile
 
-    h1 {
-      font-size: 60px;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* léger effet 3D */
-      margin-bottom: 10px;
-    }
+**Planifacile** est une solution en ligne minimaliste et élégante pour permettre aux professionnels (coachs, commerçants, praticiens...) de proposer la prise de rendez-vous sans passer par des plateformes contraignantes ou à commission.
 
-    p {
-      font-size: 20px;
-      margin-bottom: 30px;
-      max-width: 600px;
-    }
+🗓️ Prise de rendez-vous simple, directe, et sans intermédiaire  
+🎯 Interface épurée et responsive  
+⚡️ Déploiement rapide via GitHub Pages  
 
-    a.button {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 18px;
-      color: #ffffff;
-      background-color: #000000;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* ombre pour effet 3D */
-      transition: all 0.3s ease;
-    }
+## Objectif
+Offrir une alternative sobre, professionnelle et personnalisable aux outils traditionnels (ex. Doctolib) à destination des indépendants et petites structures.
 
-    a.button:hover {
-      background-color: #ffffff;
-      color: #000000;
-      border: 2px solid #000000;
-      transform: translateY(-5px);
-      box-shadow: 4px 4px 20px rgba(0,0,0,0.5); /* effet "hover" accentué */
-    }
+---
 
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 12px;
-      color: #666666;
-    }
+Créé par Héloïse BY
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    body {
-      animation: fadeIn 1.5s ease-in;
-    }
-  </style>
-</head>
-<body>
-  <h1>Planifacile</h1>
-  <p>Votre solution pour organiser vos rendez-vous sans contraintes, sans commissions, en toute simplicité.</p>
-  <a href="https://tonlienverssimplybookme" class="button">Prendre rendez-vous</a>
 
   <footer>
     © 2025 Planifacile. Tous droits réservés.
