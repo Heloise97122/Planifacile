@@ -11,7 +11,7 @@ Offrir une alternative sobre, professionnelle et personnalisable aux outils trad
 
 ---
 
-Créé par Héloïse BY
+Créé par HYB
 
 
   <footer>
