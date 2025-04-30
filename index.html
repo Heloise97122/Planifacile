@@ -1,154 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Planifacile – Créez votre propre solution de prise de rendez-vous</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planifacile - Mini site personnalisé</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(145deg, #f4f4f4, #e0e0e0);
-      color: #000;
       font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(to right, #ffffff, #f2f2f2);
+      color: #111;
       text-align: center;
-      animation: fadeIn 1.2s ease-in;
     }
-
-    header {
-      padding: 60px 20px 40px;
-    }
-
     h1 {
       font-size: 48px;
       margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
-
-    p.lead {
+    p {
       font-size: 20px;
-      max-width: 700px;
+      max-width: 600px;
       margin: 0 auto 30px;
     }
-
     .button {
       display: inline-block;
+      padding: 15px 30px;
       margin: 10px;
-      padding: 15px 25px;
-      font-size: 16px;
-      color: #fff;
+      font-size: 18px;
       background-color: #000;
+      color: #fff;
       text-decoration: none;
       border-radius: 8px;
-      transition: 0.3s ease;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
     }
-
     .button:hover {
       background-color: #fff;
       color: #000;
-      border: 1px solid #000;
+      border: 2px solid #000;
     }
-
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 18px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
     footer {
-      font-size: 14px;
+      margin-top: 60px;
+      font-size: 13px;
       color: #666;
-      padding: 40px 20px;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
   </style>
 </head>
 <body>
+  <h1>Planifacile</h1>
+  <p>Votre mini-site de prise de rendez-vous, simple, rapide, sans commission.</p>
 
-  <header>
-    <img src="logo.png" alt="Planifacile" style="width: 100px; margin-bottom: 20px;">
-    <h1>Planifacile</h1>
-    <p class="lead">
-      Créez votre propre système de prise de rendez-vous en ligne.<br>
-      Une alternative simple, rapide et sans engagement aux grosses plateformes.
-    </p>
-    <a href="#tarifs" class="button">Créer mon mini-site</a>
-    <a href="#exemple" class="button">Voir un exemple</a>
-  </header>
+  <a href="https://heloise97122.github.io/Planifacile/demo.html" class="button">Voir un exemple</a>
+  <a href="https://buy.stripe.com/9AQbJvbficuz2885kk" class="button">Commander (19 €)</a>
 
-  <section id="pourqui">
-    <h2>À qui s'adresse Planifacile ?</h2>
-    <ul>
-      <li>👩‍⚕️ Professionnels de santé</li>
-      <li>🧘 Thérapeutes, coachs, sophrologues</li>
-      <li>💼 Indépendants et micro-entrepreneurs</li>
-      <li>📆 Toute personne qui veut un agenda en ligne sans dépendre de Doctolib</li>
-    </ul>
-  </section>
-
-  <section id="fonctionnement">
-    <h2>Comment ça fonctionne ?</h2>
-    <ul>
-      <li>📝 Vous remplissez un court formulaire</li>
-      <li>🛠️ Je personnalise votre site sous 48h</li>
-      <li>📨 Vous recevez un lien pro à partager à vos clients</li>
-      <li>✅ Aucun abonnement, aucun engagement</li>
-    </ul>
-  </section>
-
-  <section id="exemple">
-    <h2>Exemple de mini-site</h2>
-    <p>Voici un exemple de site que vos clients verront :</p>
-    <a href="demo.html" target="_blank" class="button">Voir le site démo</a>
-  </section>
-
-  <section id="tarifs">
-    <h2>Tarifs</h2>
-    <p style="font-size: 20px;"><strong>💳 19 € – Paiement unique</strong></p>
-    <ul>
-      <li>✅ Mini-site personnalisé avec votre logo, nom et lien de réservation</li>
-      <li>✅ Formulaire de contact inclus</li>
-      <li>✅ Lien unique à partager : exemple. planifacile.eu/votre-nom</li>
-    </ul>
-    <a href="https://buy.stripe.com/9AQbJvbficuz2885kk" class="button">Créer mon mini-site</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Une question ? Contactez-moi directement :</p>
-    <form action="https://formspree.io/f/xkgrozea" method="POST" style="max-width: 400px; margin: 0 auto; text-align: left;">
-      <label for="email">Email :</label><br>
-      <input type="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-      <label for="message">Message :</label><br>
-      <textarea name="message" required style="width: 100%; padding: 10px; height: 100px;"></textarea><br>
-      <button type="submit" class="button" style="width: 100%; margin-top: 10px;">Envoyer</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 Planifacile — Conçu avec ❤️ par Héloïse.<br>
-    <a href="mailto:heloise.bruyere@outlook.com">heloise.bruyere@outlook.com</a>
-  </footer>
-
+  <footer>© 2025 Planifacile – Créé par HYB</footer>
 </body>
 </html>
+
