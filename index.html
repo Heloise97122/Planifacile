@@ -88,9 +88,34 @@
       color: #777;
       padding: 40px 20px;
     }
+
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switcher a {
+      color: #ccc;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .lang-switcher a.active {
+      font-weight: bold;
+      color: #fff;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
+
+<!-- Sélecteur de langue -->
+<div class="lang-switcher">
+  <a href="#" class="active">FR</a>
+  <a href="index-en.html">EN</a>
+</div>
 
 <header>
   <h1><i class="fa-solid fa-calendar-check"></i> Planifacile</h1>
@@ -123,21 +148,21 @@
 
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
 
-    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.05);">
+    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
       <h3 style="color: #fff;">🎯 Essentiel</h3>
       <p style="color: #ccc;">Mini-site personnalisé, logo, lien SimplyBook, formulaire intégré, hébergement inclus.</p>
       <p class="highlight">19 € TTC</p>
       <a href="https://buy.stripe.com/fZe5l7dnq2TZ6oo6or" class="button">Choisir l'offre Essentiel</a>
     </div>
 
-    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.05);">
+    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
       <h3 style="color: #fff;">🚀 Pro</h3>
       <p style="color: #ccc;">Toutes les options de l'offre Essentiel + nom de domaine personnalisé (.fr ou .com).</p>
       <p class="highlight">49 € TTC</p>
       <a href="https://buy.stripe.com/aEU7tf5UYcuz1445kl" class="button">Choisir l'offre Pro</a>
     </div>
 
-    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.05);">
+    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
       <h3 style="color: #fff;">💼 Premium</h3>
       <p style="color: #ccc;">Pro + assistance, modifications post-livraison et optimisation continue.</p>
       <p class="highlight">79 € TTC</p>
@@ -159,4 +184,5 @@
 
 </body>
 </html>
+
 
