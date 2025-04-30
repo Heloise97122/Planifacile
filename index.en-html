@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planifacile – Your custom booking site in 48h</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Helvetica Neue', sans-serif;
+      text-align: center;
+    }
+
+    header {
+      padding: 80px 20px 40px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #ccc;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    ul.steps {
+      list-style: none;
+      padding: 0;
+      font-size: 18px;
+      color: #bbb;
+      line-height: 1.8;
+    }
+
+    ul.steps li {
+      margin-bottom: 15px;
+    }
+
+    ul.steps i {
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    .highlight {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    footer {
+      font-size: 14px;
+      color: #777;
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><i class="fa-solid fa-calendar-check"></i> Planifacile</h1>
+  <p class="lead">
+    Create your personalized booking mini-site in 48h.<br>
+    No subscriptions, no commission, no surprises.
+  </p>
+  <a href="#pricing" class="button">Get started</a>
+  <a href="#demo" class="button">See a demo</a>
+</header>
+
+<section>
+  <h2><i class="fa-solid fa-gears"></i> How it works</h2>
+  <ul class="steps">
+    <li><i class="fa-solid fa-pencil"></i> You send your name, logo and SimplyBook link</li>
+    <li><i class="fa-solid fa-wrench"></i> I build your mini-site within 48 hours</li>
+    <li><i class="fa-solid fa-paper-plane"></i> You receive a professional link ready to share</li>
+  </ul>
+</section>
+
+<section id="demo">
+  <h2><i class="fa-solid fa-desktop"></i> Client example</h2>
+  <p>Here's a preview of a final site:</p>
+  <a href="demo.html" class="button" target="_blank">View demo</a>
+</section>
+
+<section id="pricing">
+  <h2><i class="fa-solid fa-tag"></i> Pricing</h2>
+  <p class="lead">Choose the plan that suits your needs.</p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
+
+    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
+      <h3 style="color: #fff;">🎯 Essential</h3>
+      <p style="color: #ccc;">Custom mini-site, logo, SimplyBook link, contact form and hosting included.</p>
+      <p class="highlight">19 € incl. VAT</p>
+      <a href="https://buy.stripe.com/fZe5l7dnq2TZ6oo6or" class="button">Select Essential</a>
+    </div>
+
+    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
+      <h3 style="color: #fff;">🚀 Pro</h3>
+      <p style="color: #ccc;">Everything in Essential + custom domain name (.fr or .com).</p>
+      <p class="highlight">49 € incl. VAT</p>
+      <a href="https://buy.stripe.com/aEU7tf5UYcuz1445kl" class="button">Select Pro</a>
+    </div>
+
+    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
+      <h3 style="color: #fff;">💼 Premium</h3>
+      <p style="color: #ccc;">Pro + support, modifications and updates after delivery.</p>
+      <p class="highlight">79 € incl. VAT</p>
+      <a href="https://buy.stripe.com/14kaFrbfi9in144146" class="button">Select Premium</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+  <p>Questions? Fill in this short form:</p>
+  <a href="https://tally.so/r/3xg8W9" class="button" target="_blank">Access the form</a>
+</section>
+
+<footer>
+  © 2025 Planifacile – Created with ❤️ by HYB.
+</footer>
+
+</body>
+</html>
