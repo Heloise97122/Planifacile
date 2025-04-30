@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cabinet Dupont – Prise de rendez-vous</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
@@ -65,6 +66,11 @@
       width: 100%;
     }
 
+    form h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
     input, textarea {
       width: 100%;
       padding: 12px;
@@ -105,16 +111,16 @@
 <body>
 
   <img src="logo.png" alt="Logo Cabinet Dupont" class="logo" />
-  <h1>Cabinet Dupont</h1>
-  <p>Organisez vos rendez-vous en ligne simplement, sans intermédiaire.</p>
+  <h1><i class="fa-solid fa-user-md"></i> Cabinet Dupont</h1>
+  <p><i class="fa-solid fa-calendar-days"></i> Organisez vos rendez-vous en ligne simplement, sans intermédiaire.</p>
 
-  <a href="https://planifacile.simplybook.it/v2/" class="button" target="_blank">Prendre rendez-vous</a>
+  <a href="https://planifacile.simplybook.it/v2/" class="button" target="_blank"><i class="fa-solid fa-clock"></i> Prendre rendez-vous</a>
 
   <form action="https://formspree.io/f/xkgrozea" method="POST">
-    <h2 style="color: #fff;">Contact</h2>
+    <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
     <input type="email" name="email" placeholder="Adresse email" required />
     <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
+    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Envoyer</button>
   </form>
 
   <footer>
@@ -123,5 +129,6 @@
 
 </body>
 </html>
+
 
 
