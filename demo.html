@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cabinet Dupont – Prise de rendez-vous</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cabinet Dupont – Démo Planifacile</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(145deg, #f4f4f4, #e0e0e0);
-      color: #000;
+      background: linear-gradient(to bottom right, #f0f0f0, #e5e5e5);
       font-family: 'Helvetica Neue', sans-serif;
+      color: #000;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
-      animation: fadeIn 1.5s ease-in;
+      padding-top: 40px;
     }
 
     img.logo {
       width: 120px;
-      margin: 40px 0 30px;
+      margin-bottom: 30px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    img.logo:hover {
+      transform: translateY(-5px);
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 40px;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       max-width: 600px;
       margin-bottom: 30px;
     }
@@ -40,99 +47,48 @@
     a.button {
       display: inline-block;
       padding: 15px 30px;
-      font-size: 18px;
-      color: #fff;
-      background-color: #000;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #000000;
       text-decoration: none;
       border-radius: 8px;
-      margin-bottom: 40px;
-      transition: 0.3s ease;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      margin-bottom: 60px;
     }
 
     a.button:hover {
-      background-color: #fff;
-      color: #000;
-      border: 1px solid #000;
+      background-color: #ffffff;
+      color: #000000;
+      border: 2px solid #000000;
+      transform: translateY(-5px);
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    form {
-      max-width: 400px;
-      margin: 20px auto 60px;
-      text-align: left;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #000;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      background: #fff;
-      color: #000;
-      font-family: 'Helvetica Neue', sans-serif;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      background: #000;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      background: #fff;
-      color: #000;
-      border: 1px solid #000;
+    .info {
+      font-style: italic;
+      color: #444;
     }
 
     footer {
       font-size: 12px;
       color: #666;
-      margin-bottom: 20px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      margin-top: auto;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Logo Cabinet Dupont" class="logo">
+  <img src="logo.png" alt="Logo Cabinet Dupont" class="logo" />
 
   <h1>Cabinet Dupont</h1>
   <p>Organisez vos rendez-vous en ligne simplement, sans intermédiaire.</p>
 
-  <a href="https://planifacile.simplybook.it/v2/" class="button" target="_blank">Prendre rendez-vous</a>
+  <a href="https://planifacile.simplybook.it/v2/" class="button">Prendre rendez-vous</a>
 
-  <form action="https://formspree.io/f/xkgrozea" method="POST">
-    <h2 style="text-align: center; font-size: 22px;">Contact</h2>
+  <p class="info">Démo white label – Le formulaire de contact est désactivé.</p>
 
-    <label for="email">Adresse email</label>
-    <input type="email" name="email" id="email" required>
-
-    <label for="message">Message</label>
-    <textarea name="message" id="message" required></textarea>
-
-    <button type="submit">Envoyer</button>
-  </form>
-
-  <footer>
-    Exemple de site client généré avec Planifacile
-  </footer>
+  <footer>© 2025 Planifacile – HYB. Tous droits réservés.</footer>
 </body>
-</html>
-
-
 </html>
 
