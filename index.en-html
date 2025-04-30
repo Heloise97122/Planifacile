@@ -88,9 +88,34 @@
       color: #777;
       padding: 40px 20px;
     }
+
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+    }
+
+    .lang-switcher a {
+      color: #ccc;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .lang-switcher a.active {
+      font-weight: bold;
+      color: #fff;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
+
+<!-- Sélecteur de langue -->
+<div class="lang-switcher">
+  <a href="index.html">FR</a>
+  <a href="#" class="active">EN</a>
+</div>
 
 <header>
   <h1><i class="fa-solid fa-calendar-check"></i> Planifacile</h1>
@@ -158,4 +183,5 @@
 </footer>
 
 </body>
+</html>
 </html>
