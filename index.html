@@ -4,222 +4,256 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planifacile – Créez votre mini-site de rendez-vous</title>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Planifacile – Créez votre mini-site de rendez-vous</title>
-  
-  <script>
-    if (window.location.hostname === "www.planifacile.eu") {
-      window.location.href = "https://planifacile.eu";
+  <style>
+    :root {
+      --main-color: #000;
+      --accent-color: #ffffff;
+      --bg-color: #f4f4f4;
+      --shadow: rgba(0, 0, 0, 0.1);
     }
-  </script>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    /* le reste de ton CSS ici */
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
       font-family: 'Helvetica Neue', sans-serif;
-      text-align: center;
+      background: var(--bg-color);
+      color: #111;
+      line-height: 1.6;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     header {
-      padding: 80px 20px 40px;
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header img {
+      width: 90px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
     }
 
     h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+      font-size: 42px;
+      margin: 10px 0;
     }
 
-    .lead {
-      font-size: 20px;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      color: #ccc;
+    p.subtitle {
+      font-size: 18px;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto 20px;
     }
 
     .button {
       display: inline-block;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 18px;
-      background-color: #fff;
-      color: #000;
-      border-radius: 6px;
+      margin-top: 20px;
+      background: var(--main-color);
+      color: var(--accent-color);
+      padding: 14px 28px;
+      font-size: 16px;
       text-decoration: none;
+      border-radius: 8px;
       transition: 0.3s ease;
+      box-shadow: 2px 2px 10px var(--shadow);
     }
 
     .button:hover {
-      background-color: #000;
-      color: #fff;
-      border: 2px solid #fff;
+      background: var(--accent-color);
+      color: var(--main-color);
+      border: 2px solid var(--main-color);
     }
 
     section {
       padding: 60px 20px;
-      max-width: 960px;
-      margin: 0 auto;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 30px;
     }
 
-    ul.steps {
-      list-style: none;
-      padding: 0;
-      font-size: 18px;
-      color: #bbb;
-      line-height: 1.8;
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
     }
 
-    ul.steps li {
-      margin-bottom: 15px;
+    .step {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px var(--shadow);
+      width: 300px;
     }
 
-    ul.steps i {
-      color: #fff;
-      margin-right: 10px;
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
     }
 
-    .highlight {
+    .step p {
+      font-size: 15px;
+      color: #444;
+    }
+
+    .packs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .pack {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 8px 20px var(--shadow);
+      transition: 0.3s ease;
+      text-align: left;
+    }
+
+    .pack:hover {
+      transform: translateY(-5px);
+    }
+
+    .pack h3 {
       font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .pack p {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .price {
       font-weight: bold;
-      margin: 10px 0;
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
     }
 
     footer {
+      text-align: center;
+      padding: 30px 20px;
       font-size: 14px;
-      color: #777;
-      padding: 40px 20px;
+      color: #888;
+      background: #f8f8f8;
     }
 
-    .lang-switcher {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 14px;
-    }
-
-    .lang-switcher a {
-      color: #ccc;
-      margin-left: 10px;
-      text-decoration: none;
-    }
-
-    .lang-switcher a.active {
-      font-weight: bold;
-      color: #fff;
-      pointer-events: none;
+    @media (max-width: 768px) {
+      .packs, .steps {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- Sélecteur de langue -->
-<div class="lang-switcher">
-  <a href="#" class="active">FR</a>
-  <a href="index-en.html">EN</a>
-</div>
+  <header>
+    <img src="logo.png" alt="Logo Planifacile" />
+    <h1>Planifacile</h1>
+    <p class="subtitle">Créez votre mini-site de prise de rendez-vous personnalisé en 48h.  
+      Pas d’abonnement, pas de commission, pas de surprise.</p>
+    <a href="#offres" class="button">Découvrir nos offres</a>
+  </header>
 
-<header>
-  <h1><i class="fa-solid fa-calendar-check"></i> Planifacile</h1>
-  <p class="lead">
-    Créez votre mini-site de prise de rendez-vous personnalisé en 48h.<br>
-    Pas d'abonnement, pas de commission, pas de surprise.
-  </p>
-  <a href="#tarif" class="button">Créer mon site</a>
-  <a href="#demo" class="button">Voir un exemple</a>
-</header>
-
-<section>
-  <h2><i class="fa-solid fa-gears"></i> Comment ça fonctionne ?</h2>
-  <ul class="steps">
-    <li><i class="fa-solid fa-pencil"></i> Vous m’envoyez votre nom, logo et lien SimplyBook</li>
-    <li><i class="fa-solid fa-wrench"></i> Je crée votre mini-site personnalisé sous 48h</li>
-    <li><i class="fa-solid fa-paper-plane"></i> Vous recevez un lien pro prêt à l’emploi</li>
-  </ul>
-</section>
-
-<section id="demo">
-  <h2><i class="fa-solid fa-desktop"></i> Exemple de site client</h2>
-  <p>Voici un exemple de rendu final :</p>
-  <a href="demo.html" class="button" target="_blank">Voir la démo</a>
-</section>
-
-<section id="tarif">
-  <h2><i class="fa-solid fa-tag"></i> Nos offres</h2>
-  <p class="lead">Choisissez l'offre qui correspond à vos besoins.</p>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
-
-    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
-      <h3 style="color: #fff;">🎯 Essentiel</h3>
-      <p style="color: #ccc;">Mini-site personnalisé, logo, lien SimplyBook, formulaire intégré, hébergement inclus.</p>
-      <p class="highlight">19 € TTC</p>
-      <a href="https://buy.stripe.com/fZe5l7dnq2TZ6oo6or" class="button">Choisir l'offre Essentiel</a>
+  <section>
+    <h2>Comment ça fonctionne ?</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Vous commandez</h3>
+        <p>Choisissez votre pack et payez via Stripe en 1 clic.</p>
+      </div>
+      <div class="step">
+        <h3>2. Vous nous transmettez vos infos</h3>
+        <p>Formulaire rapide : nom, logo, lien SimplyBook, préférences visuelles.</p>
+      </div>
+      <div class="step">
+        <h3>3. On crée votre site</h3>
+        <p>Livraison en 48h maximum, hébergement et configuration inclus.</p>
+      </div>
     </div>
+  </section>
 
-    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
-      <h3 style="color: #fff;">🚀 Pro</h3>
-      <p style="color: #ccc;">Toutes les options de l'offre Essentiel + nom de domaine personnalisé (.fr ou .com).</p>
-      <p class="highlight">49 € TTC</p>
-      <a href="https://buy.stripe.com/aEU7tf5UYcuz1445kl" class="button">Choisir l'offre Pro</a>
+  <section id="offres">
+    <h2>Nos offres</h2>
+    <div class="packs">
+      <div class="pack">
+        <h3>Essential</h3>
+        <p>Mini-site personnalisé, logo, lien SimplyBook, formulaire intégré, hébergement inclus.</p>
+        <div class="price">19 €</div>
+        <a href="https://buy.stripe.com/fZe5l7dnq2TZ6oo6or" class="button">Choisir Essentiel</a>
+      </div>
+
+      <div class="pack">
+        <h3>Pro</h3>
+        <p>Tout le pack Essential + nom de domaine personnalisé (.fr ou .com).</p>
+        <div class="price">49 €</div>
+        <a href="https://buy.stripe.com/aEU7tf5UYcuz1445kl" class="button">Choisir Pro</a>
+      </div>
+
+      <div class="pack">
+        <h3>Premium</h3>
+        <p>Pack Pro + animations, modifications post-livraison, SEO optimisé.</p>
+        <div class="price">79 €</div>
+        <a href="https://buy.stripe.com/14kaFrbfi9in144146" class="button">Choisir Premium</a>
+      </div>
     </div>
+  </section>
 
-    <div style="max-width: 280px; background-color: #111; padding: 30px; border-radius: 10px;">
-      <h3 style="color: #fff;">💼 Premium</h3>
-      <p style="color: #ccc;">Pro + assistance, modifications post-livraison et optimisation continue.</p>
-      <p class="highlight">79 € TTC</p>
-      <a href="https://buy.stripe.com/14kaFrbfi9in144146" class="button">Choisir l'offre Premium</a>
-    </div>
+  <section id="contact">
+    <h2>Une question ?</h2>
+    <p>Remplissez le formulaire ci-dessous et on vous répond dans la journée.</p>
+    <form action="https://formspree.io/f/xkgrozea" method="POST">
+      <label for="email">Adresse email</label>
+      <input type="email" name="email" id="email" required />
 
-  </div>
-</section>
+      <label for="message">Message</label>
+      <textarea name="message" id="message" required rows="5"></textarea>
 
-<section id="contact">
-  <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
-  <p>Une question ? Remplissez le formulaire ci-dessous :</p>
-  <a href="https://tally.so/r/3xg8W9" class="button" target="_blank">Accéder au formulaire</a>
-</section>
-<section id="faq">
-  <h2><i class="fa-solid fa-circle-question"></i> Questions fréquentes</h2>
+      <button type="submit" class="button" style="width: 100%; margin-top: 10px;">Envoyer</button>
+    </form>
+  </section>
 
-  <div style="text-align: left; max-width: 800px; margin: 0 auto; font-size: 18px; color: #ccc;">
-
-    <p><strong>🕒 En combien de temps vais-je recevoir mon site ?</strong><br>
-    En moins de 48 heures après réception de votre logo et lien SimplyBook.</p>
-
-    <p><strong>🔧 Puis-je modifier mon site après la livraison ?</strong><br>
-    Oui, l’offre Premium inclut les modifications post-livraison. Sinon, vous pouvez faire appel à moi ponctuellement.</p>
-
-    <p><strong>🌐 Puis-je utiliser mon propre nom de domaine ?</strong><br>
-    Bien sûr ! L’offre Pro et Premium inclut la création du site avec votre propre domaine personnalisé.</p>
-
-    <p><strong>💳 Dois-je payer un abonnement ?</strong><br>
-    Non. Tous les forfaits sont des paiements uniques. Aucun abonnement obligatoire.</p>
-
-    <p><strong>📬 Et si j’ai une question ou besoin d’aide ?</strong><br>
-    Vous pouvez me contacter à tout moment via le formulaire de contact.</p>
-
-  </div>
-</section>
-
-<footer>
-  © 2025 Planifacile – Conçu avec ❤️ par HYB.
-</footer>
+  <footer>
+    © 2025 Planifacile. Site conçu avec soin par HYB.
+  </footer>
 
 </body>
 </html>
+
 
 
