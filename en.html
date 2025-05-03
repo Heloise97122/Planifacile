@@ -26,6 +26,20 @@
       padding: 60px 20px 30px;
       background: #fff;
       box-shadow: 0 4px 8px var(--shadow);
+      position: relative;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: bold;
     }
 
     header img {
@@ -166,6 +180,9 @@
 </head>
 <body>
   <header>
+    <div class="lang-switch">
+      <a href="index.html">FR</a> | <a href="en.html">EN</a>
+    </div>
     <img src="logo.png" alt="Planifacile Logo" />
     <h1>Planifacile</h1>
     <p class="subtitle">Your custom booking mini-site delivered in 48h. <br>No subscription. QR code included.</p>
@@ -217,8 +234,3 @@
   </footer>
 </body>
 </html>
-
-
-</body>
-</html>
-
