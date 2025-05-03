@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Planifacile – Créez votre mini-site de rendez-vous</title>
+  <title>Planifacile – Votre mini-site de rendez-vous</title>
   <style>
     :root {
       --main-color: #000;
-      --accent-color: #ffffff;
+      --accent-color: #fff;
+      --highlight: #ffcc00;
       --bg-color: #f4f4f4;
       --shadow: rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
@@ -22,35 +19,31 @@
       background: var(--bg-color);
       color: #111;
       line-height: 1.6;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
 
     header {
       text-align: center;
       padding: 60px 20px 30px;
+      background: #fff;
+      box-shadow: 0 4px 8px var(--shadow);
     }
 
     header img {
       width: 90px;
       margin-bottom: 20px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
       border-radius: 50%;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 44px;
       margin: 10px 0;
     }
 
-    p.subtitle {
-      font-size: 18px;
-      color: #444;
-      max-width: 600px;
+    .subtitle {
+      font-size: 20px;
+      color: #333;
+      max-width: 700px;
       margin: 0 auto 20px;
     }
 
@@ -59,18 +52,17 @@
       margin-top: 20px;
       background: var(--main-color);
       color: var(--accent-color);
-      padding: 14px 28px;
+      padding: 14px 32px;
       font-size: 16px;
       text-decoration: none;
-      border-radius: 8px;
-      transition: 0.3s ease;
-      box-shadow: 2px 2px 10px var(--shadow);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 12px var(--shadow);
     }
 
     .button:hover {
-      background: var(--accent-color);
-      color: var(--main-color);
-      border: 2px solid var(--main-color);
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     section {
@@ -81,34 +73,8 @@
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
-    }
-
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .step {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px var(--shadow);
-      width: 300px;
-    }
-
-    .step h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .step p {
-      font-size: 15px;
-      color: #444;
+      font-size: 32px;
+      margin-bottom: 40px;
     }
 
     .packs {
@@ -116,17 +82,17 @@
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
-      margin-top: 40px;
     }
 
     .pack {
       background: #fff;
-      border-radius: 12px;
-      padding: 25px;
+      border-radius: 14px;
+      padding: 30px 20px;
       width: 280px;
-      box-shadow: 0 8px 20px var(--shadow);
+      box-shadow: 0 12px 24px var(--shadow);
       transition: 0.3s ease;
-      text-align: left;
+      text-align: center;
+      position: relative;
     }
 
     .pack:hover {
@@ -134,34 +100,59 @@
     }
 
     .pack h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 12px;
     }
 
     .pack p {
       font-size: 15px;
       color: #333;
+      margin-bottom: 20px;
     }
 
     .price {
       font-weight: bold;
-      font-size: 20px;
+      font-size: 22px;
       margin: 15px 0;
     }
 
-    form {
-      max-width: 400px;
-      margin: 0 auto;
-      text-align: left;
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--highlight);
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
+    .pack.surmesure {
+      background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+      border: 2px solid #ccc;
+    }
+
+    .testimonials {
+      background: #fff;
+      padding: 60px 20px;
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 300px;
+      font-style: italic;
+      color: #444;
+      box-shadow: 0 4px 12px var(--shadow);
     }
 
     footer {
@@ -171,97 +162,58 @@
       color: #888;
       background: #f8f8f8;
     }
-
-    @media (max-width: 768px) {
-      .packs, .steps {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <header>
-  <div style="position: absolute; top: 20px; right: 20px; font-weight: bold;">
-    <a href="index.html" style="margin-right: 12px; color: #000; text-decoration: none;">FR</a>
-    <a href="en.html" style="color: #000; text-decoration: none;">EN</a>
-  </div>
-
     <img src="logo.png" alt="Logo Planifacile" />
     <h1>Planifacile</h1>
-    <p class="subtitle">Créez votre mini-site de prise de rendez-vous personnalisé en 48h.  
-      Pas d’abonnement, pas de commission, pas de surprise.</p>
+    <p class="subtitle">Votre mini-site de prise de rendez-vous, livré en 48h. <br> Pas d'abonnement. QR code inclus.</p>
     <a href="#offres" class="button">Découvrir nos offres</a>
   </header>
-
-  <section>
-    <h2>Comment ça fonctionne ?</h2>
-    <div class="steps">
-      <div class="step">
-        <h3>1. Vous commandez</h3>
-        <p>Choisissez votre pack et payez via Stripe en 1 clic.</p>
-      </div>
-      <div class="step">
-        <h3>2. Vous nous transmettez vos infos</h3>
-        <p>Formulaire rapide : nom, logo, lien SimplyBook, préférences visuelles.</p>
-      </div>
-      <div class="step">
-        <h3>3. On crée votre site</h3>
-        <p>Livraison en 48h maximum, hébergement et configuration inclus.</p>
-      </div>
-    </div>
-  </section>
 
   <section id="offres">
     <h2>Nos offres</h2>
     <div class="packs">
       <div class="pack">
-        <h3>Essential</h3>
-        <p>Mini-site personnalisé, logo, lien SimplyBook, formulaire intégré, hébergement inclus.</p>
-        <div class="price">19 €</div>
-        <a href="https://buy.stripe.com/fZe5l7dnq2TZ6oo6or" class="button">Choisir Essentiel</a>
+        <h3>Starter</h3>
+        <p>Mini-site personnalisé avec logo, lien de prise de rendez-vous, slogan. QR code inclus.</p>
+        <div class="price">39 €</div>
+        <a href="https://buy.stripe.com/fZe5l7dnq2TZ6oo6or" class="button">Choisir Starter</a>
       </div>
 
       <div class="pack">
-        <h3>Pro</h3>
-        <p>Tout le pack Essential + nom de domaine personnalisé (.fr ou .com).</p>
-        <div class="price">49 €</div>
-        <a href="https://buy.stripe.com/aEU7tf5UYcuz1445kl" class="button">Choisir Pro</a>
+        <span class="badge">Populaire</span>
+        <h3>Pro+</h3>
+        <p>Starter + nom de domaine personnalisé (.fr ou .com), support 7j, 1 révision incluse.</p>
+        <div class="price">79 €</div>
+        <a href="https://buy.stripe.com/aEU7tf5UYcuz1445kl" class="button">Choisir Pro+</a>
       </div>
 
       <div class="pack">
         <h3>Premium</h3>
-        <p>Pack Pro + animations, modifications post-livraison, SEO optimisé.</p>
-        <div class="price">79 €</div>
+        <p>Pro+ + animations, SEO, support prioritaire, 3 révisions incluses.</p>
+        <div class="price">129 €</div>
         <a href="https://buy.stripe.com/14kaFrbfi9in144146" class="button">Choisir Premium</a>
+      </div>
+
+      <div class="pack surmesure">
+        <span class="badge">Sur devis</span>
+        <h3>Sur-mesure</h3>
+        <p>Offre entreprise : design personnalisé, intégrations sur mesure, white label et accompagnement dédié.</p>
+        <div class="price">249 €</div>
+        <a href="https://buy.stripe.com/9AQdRD5UYfGL8wwdQU" class="button">Choisir Sur-mesure</a>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Une question ?</h2>
-    <p>Remplissez le formulaire ci-dessous et on vous répond dans la journée.</p>
-    <form action="https://formspree.io/f/xkgrozea" method="POST">
-      <label for="email">Adresse email</label>
-      <input type="email" name="email" id="email" required />
-
-      <label for="message">Message</label>
-      <textarea name="message" id="message" required rows="5"></textarea>
-
-      <button type="submit" class="button" style="width: 100%; margin-top: 10px;">Envoyer</button>
-    </form>
+  <section class="testimonials">
+    <div class="testimonial">"Planifacile a changé la façon dont mes clients prennent rendez-vous. Simple, rapide et efficace !"<br><strong>– Julie, thérapeute</strong></div>
+    <div class="testimonial">"Un site pro en 48h, sans abonnement ni stress. Je recommande à tous mes confrères."<br><strong>– Karim, ostéopathe</strong></div>
   </section>
 
- <footer>
-  © 2025 Planifacile. Tous droits réservés. ·
-  <a href="resellers.html" style="color: inherit; text-decoration: underline;">Devenir revendeur</a>
-</footer>
-
-
+  <footer>
+    © 2025 Planifacile. Tous droits réservés.
+  </footer>
 </body>
 </html>
-
-
-
